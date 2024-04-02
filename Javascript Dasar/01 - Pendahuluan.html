@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pendahuluan</title>
+  </head>
+  <body id="demoBg">
+    <h3>JavaScript dapat mengubah gaya HTML (CSS)</h3>
+    <p>Mengubah gaya elemen HTML, adalah varian dari mengubah HTML atribut:</p>
+    <b>Contoh</b>
+    <p id="demo">JavaScript can change the style of an HTML element.</p>
+    <button type="button" onclick="document.getElementById('demo').style.fontSize = '35px'">Click me</button>
+
+    <h3>JavaScript Dapat Menyembunyikan Elemen HTML</h3>
+    <p>Menyembunyikan elemen HTML dapat dilakukan dengan mengubah gaya: <code>display</code></p>
+    <b>Contoh</b>
+    <p id="demo1">JavaScript can hide HTML elements.</p>
+    <button type="button" onclick="document.getElementById('demo1').style.display = 'none'">Click me</button>
+
+    <h3>JavaScript dapat menampilkan elemen HTML</h3>
+    <p>Menampilkan elemen HTML tersembunyi juga dapat dilakukan dengan mengubah gaya: <code>display</code></p>
+    <b>Contoh</b>
+    <p id="demo2" style="display: none">Hello JavaScript</p>
+    <button type="button" onclick="document.getElementById('demo2').style.display='block'">Click me</button> <br /><br />
+
+    <b>Contoh lain</b>
+    <p>Ganti background:</p>
+    <button type="button" onclick="document.getElementById('demoBg').style.backgroundColor = '#fff4a3'">Click me</button>
+    <p id="demo3">Ganti font color:</p>
+    <button type="button" onclick="document.getElementById('demo3').style.color='red'">Click me</button>
+    <button type="button" onclick="changeColor()">change all</button><br /><br />
+
+    <button type="button" onclick="document.getElementById('lamp').src='./img/lamp-on.jpg'">On</button>
+    <img style="width: 100px" id="lamp" src="./img/lamp-off.jpg" alt="Lamp" />
+    <button type="button" onclick="document.getElementById('lamp').src='./img/lamp-off.jpg'">Off</button>
+
+    <h3>Selanjutnya</h3>
+    <button style="cursor: pointer" type="button" onclick="window.location.href='00 - Intro.html'">Prev</button>
+    <button style="cursor: pointer" type="button" onclick="window.location.href='02 - JS Where to.html'">Next</button>
+    <script>
+      function changeColor() {
+        var paragraph = document.getElementsByTagName('p');
+        for (var i = 0; i < paragraph.length; i++) {
+          paragraph[i].style.color = 'red';
+        }
+      }
+    </script>
+  </body>
+</html>
