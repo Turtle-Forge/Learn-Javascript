@@ -4,6 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS Where to</title>
+
+    <!-- JS in Head Tag -->
+    <script>
+      function demoJSHead() {
+        document.getElementById('demoJsHead').innerHTML = 'Paragraph changed';
+      }
+    </script>
   </head>
-  <body></body>
+  <body>
+    <h3>The &lt;script&gt; Tag</h3>
+    <p>Dalam HTML, kode JavaScript disisipkan di antara tag &lt;script&gt; dan &lt;/script&gt;.</p>
+    <b>Contoh</b>
+    <p id="demo"></p>
+    <button type="button" onclick="demo()">Click me</button>
+
+    <h3>JavaScript Functions & Events</h3>
+    <p>A JavaScript function is a block of JavaScript code, that can be executed when "called" for. <br />For example, a function can be called when an event occurs, like when the user clicks a button.</p>
+
+    <h3>JavaScript in &lt;head&gt; or &lt;body&gt;</h3>
+    <p>
+      Anda dapat menempatkan sejumlah skrip dalam dokumen HTML. <br />
+      Skrip dapat ditempatkan di bagian &lt;body&gt;, atau di bagian &lt;head&gt; pada halaman HTML, atau di keduanya.
+    </p>
+
+    <h3>JavaScript in &lt;head&gt; tag</h3>
+    <b>Contoh</b>
+    <p id="demoJsHead">A paragraph</p>
+    <button type="button" onclick="demoJSHead()">Click me</button>
+
+    <h3>External JavaScript</h3>
+    <p>
+      Skrip juga dapat ditempatkan dalam file eksternal. <br />
+      Skrip eksternal sangat praktis ketika kode yang sama digunakan di banyak halaman web yang berbeda. <br />
+      File JavaScript memiliki ekstensi file <b>.js</b>. <br />
+      To use an external script, put the name of the script file in the src (source) attribute of a &lt;script&gt; tag:
+    </p>
+
+    <strong>Note: Skrip eksternal tidak dapat berisi tag &lt;script&gt;.</strong><br /><br />
+    <b>Contoh</b>
+    <p id="demoJsEx">Helo, belajar JavaScript menyenangkan</p>
+    <button type="button" onclick="demoJSExternal()">Click me</button>
+
+    <h3>Keuntungan JavaScript Eksternal</h3>
+    <p>Menempatkan skrip dalam file eksternal memiliki beberapa keuntungan:</p>
+    <ul>
+      <li>Memisahkan HTML dan kode</li>
+      <li>Membuat HTML dan JavaScript lebih mudah dibaca dan dipelihara</li>
+      <li>File JavaScript yang di-cache dapat mempercepat pemuatan halaman</li>
+    </ul>
+    <p>Untuk menambahkan beberapa file skrip ke satu halaman - gunakan beberapa tag skrip:</p>
+    <b>contoh</b>
+    <br />
+    <code>
+      &lt;script src="myScript1.js"&gt;&lt;/script&gt;<br />
+      &lt;script src="myScript2.js"&gt;&lt;/script&gt;
+    </code>
+
+    <h3>Selanjutnya</h3>
+    <button style="cursor: pointer" type="button" onclick="window.location.href='01 - Pendahuluan.html'">Prev</button>
+    <button style="cursor: pointer" type="button" onclick="window.location.href=''">Next</button>
+
+    <!-- JS in Body -->
+    <script>
+      function demo() {
+        document.getElementById('demo').innerHTML = 'Hello JavaScript';
+      }
+    </script>
+
+    <!-- External JS -->
+    <script src="./js/myScript.js"></script>
+  </body>
 </html>
