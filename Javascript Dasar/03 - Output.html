@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Output</title>
+  </head>
+  <body>
+    <h2>Kemungkinan Tampilan JavaScript</h2>
+
+    <p>JavaScript dapat "menampilkan" data dengan berbagai cara:</p>
+    <ul>
+      <li>Menulis ke dalam elemen HTML, menggunakan innerHTML.</li>
+      <li>Menulis ke dalam output HTML menggunakan document.write().</li>
+      <li>Menulis ke dalam kotak peringatan, menggunakan window.alert().</li>
+      <li>Menulis ke dalam konsol peramban, menggunakan console.log().</li>
+    </ul>
+
+    <!-- Inner HTML -->
+    <h3>Menggunakan innerHTML</h3>
+    <p>
+      Untuk mengakses elemen HTML, JavaScript dapat menggunakan metode document.getElementById(id). <br />
+      Atribut id mendefinisikan elemen HTML. Properti innerHTML mendefinisikan konten HTML:
+    </p>
+    <b>Contoh</b>
+    <p id="demo"></p>
+    <p>10 + 20 = <span id="result">...</span></p>
+    <button type="button" onclick="result()">Lihat</button><br />
+
+    <p><strong>Tips:</strong> Mengubah properti innerHTML dari sebuah elemen HTML adalah cara yang umum digunakan untuk menampilkan data dalam HTML.</p>
+
+    <h3>Menggunakan document.write()</h3>
+    <p>Untuk tujuan pengujian, akan lebih mudah menggunakan document.write():</p>
+    <b>Contoh</b>
+    <br />
+    <p><strong>Note: </strong>Menggunakan document.write() setelah dokumen HTML dimuat, akan menghapus semua HTML yang ada. Metode document.write() seharusnya hanya digunakan untuk Testing.</p>
+    <button type="button" onclick="write()">Coba</button><br />
+
+    <h3>Menggunakan window.alert()</h3>
+    <button type="button" onclick="myAlert()">Coba</button>
+    <p>
+      <strong>Note:</strong> Anda dapat melewatkan kata kunci window. <br />
+      Dalam JavaScript, objek window adalah objek lingkup global. Ini berarti bahwa variabel, properti, dan metode secara default adalah milik objek window. Ini juga berarti bahwa menentukan kata kunci window adalah opsional
+    </p>
+    <b>Contoh</b>
+    <button type="button" onclick="myAlert1()">Coba</button>
+
+    <h3>Using console.log()</h3>
+    <p>Untuk tujuan debugging, Anda dapat memanggil metode console.log() di browser untuk menampilkan data.</p>
+    <b>Contoh</b>
+    <button type="button" onclick="myConsole()">Coba</button>
+
+    <h3>JavaScript Print</h3>
+    <p>
+      JavaScript tidak memiliki objek print atau metode print. <br />
+      Anda tidak dapat mengakses perangkat output dari JavaScript. <br />
+      Satu-satunya pengecualian adalah Anda dapat memanggil metode window.print() di browser untuk mencetak konten jendela saat ini.
+    </p>
+
+    <button type="button" onclick="myPrint()">Print</button>
+    <!-- JavaScript -->
+    <script src="js/01_Output.js"></script>
+  </body>
+</html>
